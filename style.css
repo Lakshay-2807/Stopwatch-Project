@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2f2f2f, #121212); /* Dark gradient background */
+    color: #f0f0f0; /* Light text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.stopwatch {
+    background-color: rgba(20, 20, 20, 0.8); /* Slightly translucent dark background */
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Soft shadow for 3D effect */
+    backdrop-filter: blur(10px); /* Subtle blur effect on background */
+}
+
+.timerDisplay {
+    font-size: 80px; /* Larger font size for modern feel */
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #e0e0e0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Soft shadow for text readability */
+}
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 50px; /* Circular button shape */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#startBtn {
+    background: linear-gradient(145deg, #4caf50, #45a049); /* Green gradient */
+}
+
+#stopBtn {
+    background: linear-gradient(145deg, #f44336, #d32f2f); /* Red gradient */
+}
+
+#resetBtn {
+    background: linear-gradient(145deg, #ff9800, #fb8c00); /* Orange gradient */
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: scale(1.05);
+}
+
+/* Button animations */
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    transform: translate(-50%, -50%);
+}
+
+.btn:hover:before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.btn:focus {
+    outline: none;
+}
+
